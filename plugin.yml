@@ -1,0 +1,47 @@
+name: AutoRegX
+version: "1.0-BETA"
+api-version: 1.16
+main: com.yourname.autoregx.AutoRegX
+authors:
+
+YourName
+commands:
+register:
+description: Регистрация нового игрока
+aliases: [reg, /reg, /register]
+usage: /register <пароль>
+permission: autoregx.register
+login:
+description: Вход по паролю
+aliases: [l, login]
+usage: /login <пароль>
+permission: autoregx.login
+delregister:
+description: Удалить регистрацию игрока
+usage: /delregister
+permission: autoregx.delregister
+captcha:
+description: Ввести капчу
+usage: /captcha <код>
+permission: autoregx.captcha
+email:
+description: Восстановление пароля через email
+usage: /email <адрес>
+permission: autoregx.email
+linfo:
+description: Информация о последнем входе
+usage: /linfo
+permission: autoregx.linfo
+permissions:
+autoregx.register:
+default: true
+autoregx.login:
+default: true
+autoregx.delregister:
+default: op
+autoregx.captcha:
+default: true
+autoregx.email:
+default: true
+autoregx.linfo:
+default: true
